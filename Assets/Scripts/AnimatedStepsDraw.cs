@@ -7,11 +7,12 @@ public class AnimatedStepsDraw : MonoBehaviour
 	public Shader steps_shader;
 
 	public GameObject terrain;
-	public GameObject[] legs; // legs check in front, behind, right, left
 	public GameObject[] feet; // feet check in front, behind, right, left, and below.
 
 	public float brush_size;
 	public float brush_strength;
+
+	private Vector3[] leg_collider_positions;
 
 	private Material draw_material;
 	private Material terrain_material;
@@ -42,16 +43,13 @@ public class AnimatedStepsDraw : MonoBehaviour
 			RenderTexture.ReleaseTemporary(tmp);
 		}*/
 
-		for(int i = 0; i < legs.Length; i++)
+		for(int i = 0; i < feet.Length; i++)
 		{
+
 			// A raycast won't work cause a plane is 2D... fuck.
-			Debug.Log("Leg " + i + " position: " + legs[i].transform.position.ToString("F4"));
-			if(	Physics.Raycast(legs[i].transform.position, Vector3.right, out hit, 1.0f, layer_mask) 	|| 
-				Physics.Raycast(legs[i].transform.position, -Vector3.right, out hit, 1.0f, layer_mask) 	||
-				Physics.Raycast(legs[i].transform.position, Vector3.forward, out hit, 1.0f, layer_mask) ||
-				Physics.Raycast(legs[i].transform.position, -Vector3.forward, out hit, 1.0f, layer_mask))
+			if(Physics.Raycast(feet[i].transform.position, -Vector3.up, out hit, 1.5f, layer_mask))
 			{
-				Debug.Log("LEG HIT");
+				Debug.Log("LEG HIT AT (" + hit.textureCoord.x + " " + hit.textureCoord.y + ")");
 				draw_material.SetVector("_TextureCoordinate", new Vector4(hit.textureCoord.x, hit.textureCoord.y, 0, 0));
 
 				RenderTexture tmp = RenderTexture.GetTemporary(displacement_map.width, displacement_map.height, 0, RenderTextureFormat.ARGBFloat);
