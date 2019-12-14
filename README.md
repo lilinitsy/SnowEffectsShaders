@@ -81,11 +81,20 @@ fixed4 frag(v2f i) : SV_Target
 
 This shader works hand in hand with the "Steps Draw" scripts. There are two - a NonAnimated one, and an Animated one. Both are in Assets/Scripts, and must be placed onto the actor that triggers the deformations.
 
-[PICTURE of ANIMATED SETUP]
+![animatorsetup](images/animator-setup.png)
+
+
+
 
 Basically this just, for each foot, raycasts downward 1.5 units and will use the Graphics Blit function and a RenderTexture to draw onto the terrain. This pops up frequently in forum topics about it, and while it seems awkward and I wanted to avoid it, it's very ubiquitously suggested for this kind of thing. One of the biggest issues with getting this to work versus the non animated version was to get it set up with Lara's bone structure. Apparently if you attach colliders to gameobjects, such as a leg, the collider won't stay with the leg when the leg's animated. Colliders have to be attached to *bones* since the body part itself is technically not moving, but it took a lot of forum digging to find that out - for a while, it would just deform at their transform.position, which happened to be the same spot for each leg and foot. And we can't just attach the collider to the root bone, since as shown in the picture, that may not be the one we want. In this case, we need the bone closest to the ground, which is not the hip, but the toe.
 
-[PICTURE OF LARA'S LEG + SETUP]
+Here are the bones specifically that are attached.
+
+![bones](images/bones.png)
+
+In the next two images, we can see the difference. Her foot is selected in the first one, but its' transform center isn't actually on the foot, it's in the middle of the feet. The foot model will follow the bone transform.
+
+![footsetup](images/foot-setup.png)
 
 ```cpp
 for(int i = 0; i < feet.Length; i++)
@@ -107,11 +116,11 @@ for(int i = 0; i < feet.Length; i++)
 ### Animation Challenges
 So, there are some big issues with importing someone elses animated models. There are definitely advantages, such as me not having to go out and learn how to do animations from scratch. Or worse, modeling from scratch. But some of the challenges are that when importing the model, we have this massive animation state machine I don't know how to work with, and a set of long scripts that are meant to handle it while I just want a couple animations.
 
-[PICTURE OF URAIDERS'S STATE MACHINE]
+![state](images/state.png)
 
-So, I got rid of a lot of things. Here's my state machine.
+So, I ripped it out. Here's my state machine.
 
-[PICTURE OF MY STATE MACHINE FOR WHATEVER]
+![mystate](images/mystate.png)
 
 Didn't bother using the scripts. I just made a new Animator for each (2) of the animations I cared to use for demos, and placed them on different characters in different scenes. iT'S A fEaTuRE!! As such, the animations are going to look choppy and sucky. The original animations from the repo linked at the end are phenomenally well done and thorough, I just desecrated them for my purpose.
 
