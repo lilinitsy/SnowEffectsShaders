@@ -1,9 +1,9 @@
 ﻿// This is going to use distance-based tessellation method
-Shader "Custom/StepsSnow"
+Shader "Custom/TextureSteps"
 {
     Properties
     {
-		_Tess("Tessellation",  Range(1, 32)) = 4
+		_Tess("Tesselation",  Range(1, 32)) = 4
 		_DisplacementMap("Displacement Texture", 2D) = "black" {}
 		_Displacement("Displacement", Range(0, 1.0)) = 0.15
         _SnowColour("Snow Colour", Color) = (1, 1, 1, 1)
