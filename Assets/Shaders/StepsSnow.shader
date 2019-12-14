@@ -62,15 +62,15 @@ Shader "Custom/StepsSnow"
 		// VERTEX OFFSET IS DONE HERE
 		void disp(inout appdata v)
 		{
-			float d = tex2Dlod(_DisplacementMap, float4(v.texcoord.xy,0,0)).r * _Displacement;
-			if(d > 0.1)
+			float displacement = tex2Dlod(_DisplacementMap, float4(v.texcoord.xy,0,0)).r * _Displacement;
+			if(displacement > 0.1)
 			{
-				v.vertex.xyz -= v.normal * d;
+				v.vertex.xyz -= v.normal * displacement;
 			}
 
 			else
 			{
-				v.vertex.xyz += v.normal * d;
+				v.vertex.xyz += v.normal * displacement;
 			}
 
 			v.vertex.xyz += v.normal * _Displacement;
@@ -100,7 +100,7 @@ Shader "Custom/StepsSnow"
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
             // Albedo comes from a texture tinted by color
-			float displacement_val = tex2Dlod(_DisplacementMap, float4(IN.uv_DisplacementMap, 0, 0)).r;
+			float displacement_val = tex2Dlod(_DisplacementMap, float4(IN.uv_DisplacementMap, 0, 0)).r; // why aren't .b or .g working?
 			float4 c;
 			if(displacement_val > 0.5)
 			{

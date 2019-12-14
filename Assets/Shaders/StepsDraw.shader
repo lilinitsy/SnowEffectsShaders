@@ -57,7 +57,9 @@
             {
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
-				float strength = pow(saturate(1 - distance(i.uv, _TextureCoordinate.xy)), 1024 / _BrushSize);
+				float distance_falloff = 1 - distance(i.uv, _TextureCoordinate.xy);
+				float clamped_distance_falloff = saturate(distance_falloff);
+				float strength = pow(clamped_distance_falloff, 1024 / _BrushSize);
 				fixed4 draw_colour = _DrawColour * (strength * _BrushStrength);
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
