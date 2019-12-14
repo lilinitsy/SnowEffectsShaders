@@ -1,40 +1,40 @@
 ﻿// This is going to use distance-based tessellation method
 Shader "Custom/StepsSnow"
 {
-    Properties
-    {
+	Properties
+	{
 		_Tess("Tessellation",  Range(1, 32)) = 4
 		_DisplacementMap("Displacement Texture", 2D) = "black" {}
 		_Displacement("Displacement", Range(0, 1.0)) = 0.15
-        _SnowColour("Snow Colour", Color) = (1, 1, 1, 1)
-        _SnowTexture("Snow Albedo (RGB)", 2D) = "white" {}
+		_SnowColour("Snow Colour", Color) = (1, 1, 1, 1)
+		_SnowTexture("Snow Albedo (RGB)", 2D) = "white" {}
 		_GroundColour("Ground Colour", Color) = (1, 1, 1, 1)
 		_GroundColour2("Ground Colour 2", Color) = (1, 1, 1, 1)
-        _GroundTexture("Ground Albedo (RGB)", 2D) = "white" {}
-        _Glossiness("Smoothness", Range(0, 1)) = 0.5
-        _Metallic("Metallic", Range(0, 1)) = 0.0
-    }
+		_GroundTexture("Ground Albedo (RGB)", 2D) = "white" {}
+		_Glossiness("Smoothness", Range(0, 1)) = 0.5
+		_Metallic("Metallic", Range(0, 1)) = 0.0
+	}
 
     SubShader
     {
         Tags {"RenderType"="Opaque"}
         LOD 200
 
-        CGPROGRAM
-        // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows vertex:disp tessellate:tessDistance
+    	CGPROGRAM
+    	// Physically based Standard lighting model, and enable shadows on all light types
+    	#pragma surface surf Standard fullforwardshadows vertex:disp tessellate:tessDistance
 
         // Use shader model 3.0 target, to get nicer looking lighting
-        #pragma target 4.6
+    	#pragma target 4.6
 
 		half 		_Glossiness;
-        half 		_Metallic;
-        float4 		_GroundColour;
+    	half 		_Metallic;
+		float4 		_GroundColour;
 		float4		_GroundColour2;
 		float4 		_SnowColour;
 		float		_Displacement;
 		float 		_Tess;
-        sampler2D 	_GroundTexture;
+		sampler2D 	_GroundTexture;
 		sampler2D 	_SnowTexture;
 		sampler2D 	_DisplacementMap;
 
@@ -117,7 +117,7 @@ Shader "Custom/StepsSnow"
             o.Smoothness = _Glossiness;
             o.Alpha = c.a;
 
-			o.Normal = UnpackNormal(tex2D(_DisplacementMap, IN.uv_DisplacementMap));
+			//o.Normal = UnpackNormal(tex2D(_DisplacementMap, IN.uv_DisplacementMap)); // this makes everything darker but ihni y
 
         }
 
