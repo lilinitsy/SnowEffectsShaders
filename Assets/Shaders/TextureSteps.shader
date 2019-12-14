@@ -3,7 +3,7 @@ Shader "Custom/TextureSteps"
 {
     Properties
     {
-		_Tess("Tesselation",  Range(1, 32)) = 4
+		_Tess("Tessellation",  Range(1, 32)) = 4
 		_DisplacementMap("Displacement Texture", 2D) = "black" {}
 		_Displacement("Displacement", Range(0, 1.0)) = 0.15
         _SnowColour("Snow Colour", Color) = (1, 1, 1, 1)
@@ -62,18 +62,14 @@ Shader "Custom/TextureSteps"
 		// VERTEX OFFSET IS DONE HERE
 		void disp(inout appdata v)
 		{
-			float d = tex2Dlod(_DisplacementMap, float4(v.texcoord.xy,0,0)).r * _Displacement;
-			if(d > 0.1)
-			{
-				v.vertex.xyz -= v.normal * d;
-			}
-
-			else
-			{
-				v.vertex.xyz += v.normal * d;
-			}
-
-			v.vertex.xyz += v.normal * _Displacement;
+			float a = tex2Dlod(_DisplacementMap, float4(v.texcoord.x - 0.1f, v.texcoord.y, 0, 0)).z * _Displacement;
+            float b = tex2Dlod(_DisplacementMap, float4(v.texcoord.x + 0.1f, v.texcoord.y, 0, 0)).z * _Displacement;
+			// order doesn't matter here
+            float3 q = float3(0.01f, 0.0f, b - a);
+            float3 r = float3(0.0f, 0.1f, a - b);
+            float3 cross_product = cross(q, r);
+			v.vertex.y = tex2Dlod(_DisplacementMap, float4(v.texcoord.xy,0,0)).r * _Displacement;
+			v.normal = normalize(cross_product);
 		}
 
 		//////////////////////
@@ -116,9 +112,6 @@ Shader "Custom/TextureSteps"
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
             o.Alpha = c.a;
-
-			o.Normal = UnpackNormal(tex2D(_DisplacementMap, IN.uv_DisplacementMap));
-
         }
 
         ENDCG

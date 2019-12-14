@@ -33,15 +33,6 @@ public class AnimatedStepsDraw : MonoBehaviour
     {
 		int layer_mask = 1 << 8;
 		RaycastHit hit;
-		/*if(Physics.Raycast(transform.position, -Vector3.up, out hit, 1.0f, layer_mask))
-		{
-			draw_material.SetVector("_TextureCoordinate", new Vector4(hit.textureCoord.x, hit.textureCoord.y, 0, 0));
-
-			RenderTexture tmp = RenderTexture.GetTemporary(displacement_map.width, displacement_map.height, 0, RenderTextureFormat.ARGBFloat);
-			Graphics.Blit(displacement_map, tmp);
-			Graphics.Blit(tmp, displacement_map, draw_material);
-			RenderTexture.ReleaseTemporary(tmp);
-		}*/
 
 		for(int i = 0; i < feet.Length; i++)
 		{
