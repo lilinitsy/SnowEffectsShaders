@@ -1,140 +1,401 @@
 fileFormatVersion: 2
 guid: dc3531a32a50ca647bbea3804b1df93c
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: ANKLE_L
-    100002: ANKLE_R
-    100004: BICEP_L
-    100006: BICEP_R
-    100008: CALF_L
-    100010: CALF_R
-    100012: FORARM_L
-    100014: FORARM_R
-    100016: HEAD
-    100018: HIP
-    100020: INDEX1_L
-    100022: INDEX1_R
-    100024: INDEX2_L
-    100026: INDEX2_R
-    100028: INDEX3_L
-    100030: INDEX3_R
-    100032: JUG_L_DYNAMIC
-    100034: JUG_R_DYNAMIC
-    100036: //RootNode
-    100038: LITTLE1_L
-    100040: LITTLE1_R
-    100042: LITTLE2_L
-    100044: LITTLE2_R
-    100046: LITTLE3_L
-    100048: LITTLE3_R
-    100050: MIDDLE1_L
-    100052: MIDDLE1_R
-    100054: MIDDLE2_L
-    100056: MIDDLE2_R
-    100058: MIDDLE3_L
-    100060: MIDDLE3_R
-    100062: NECK
-    100064: PALM_L
-    100066: PALM_R
-    100068: PONY10_DYNAMIC
-    100070: PONY1_DYNAMIC
-    100072: PONY2_DYNAMIC
-    100074: PONY3_DYNAMIC
-    100076: PONY4_DYNAMIC
-    100078: PONY5_DYNAMIC
-    100080: PONY6_DYNAMIC
-    100082: PONY7_DYNAMIC
-    100084: PONY8_DYNAMIC
-    100086: PONY9_DYNAMIC
-    100088: RING1_L
-    100090: RING1_R
-    100092: RING2_L
-    100094: RING2_R
-    100096: RING3_L
-    100098: RING3_R
-    100100: SHLDER_L
-    100102: SHLDER_R
-    100104: SPINE_1
-    100106: SPINE_2
-    100108: THIGH_L
-    100110: THIGH_R
-    100112: THORAX
-    100114: THUMB1_L
-    100116: THUMB1_R
-    100118: THUMB2_L
-    100120: THUMB2_R
-    100122: TOE_L
-    100124: TOE_R
-    400000: ANKLE_L
-    400002: ANKLE_R
-    400004: BICEP_L
-    400006: BICEP_R
-    400008: CALF_L
-    400010: CALF_R
-    400012: FORARM_L
-    400014: FORARM_R
-    400016: HEAD
-    400018: HIP
-    400020: INDEX1_L
-    400022: INDEX1_R
-    400024: INDEX2_L
-    400026: INDEX2_R
-    400028: INDEX3_L
-    400030: INDEX3_R
-    400032: JUG_L_DYNAMIC
-    400034: JUG_R_DYNAMIC
-    400036: //RootNode
-    400038: LITTLE1_L
-    400040: LITTLE1_R
-    400042: LITTLE2_L
-    400044: LITTLE2_R
-    400046: LITTLE3_L
-    400048: LITTLE3_R
-    400050: MIDDLE1_L
-    400052: MIDDLE1_R
-    400054: MIDDLE2_L
-    400056: MIDDLE2_R
-    400058: MIDDLE3_L
-    400060: MIDDLE3_R
-    400062: NECK
-    400064: PALM_L
-    400066: PALM_R
-    400068: PONY10_DYNAMIC
-    400070: PONY1_DYNAMIC
-    400072: PONY2_DYNAMIC
-    400074: PONY3_DYNAMIC
-    400076: PONY4_DYNAMIC
-    400078: PONY5_DYNAMIC
-    400080: PONY6_DYNAMIC
-    400082: PONY7_DYNAMIC
-    400084: PONY8_DYNAMIC
-    400086: PONY9_DYNAMIC
-    400088: RING1_L
-    400090: RING1_R
-    400092: RING2_L
-    400094: RING2_R
-    400096: RING3_L
-    400098: RING3_R
-    400100: SHLDER_L
-    400102: SHLDER_R
-    400104: SPINE_1
-    400106: SPINE_2
-    400108: THIGH_L
-    400110: THIGH_R
-    400112: THORAX
-    400114: THUMB1_L
-    400116: THUMB1_R
-    400118: THUMB2_L
-    400120: THUMB2_R
-    400122: TOE_L
-    400124: TOE_R
-    7400000: LARA_RUN
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: ANKLE_L
+  - first:
+      1: 100002
+    second: ANKLE_R
+  - first:
+      1: 100004
+    second: BICEP_L
+  - first:
+      1: 100006
+    second: BICEP_R
+  - first:
+      1: 100008
+    second: CALF_L
+  - first:
+      1: 100010
+    second: CALF_R
+  - first:
+      1: 100012
+    second: FORARM_L
+  - first:
+      1: 100014
+    second: FORARM_R
+  - first:
+      1: 100016
+    second: HEAD
+  - first:
+      1: 100018
+    second: HIP
+  - first:
+      1: 100020
+    second: INDEX1_L
+  - first:
+      1: 100022
+    second: INDEX1_R
+  - first:
+      1: 100024
+    second: INDEX2_L
+  - first:
+      1: 100026
+    second: INDEX2_R
+  - first:
+      1: 100028
+    second: INDEX3_L
+  - first:
+      1: 100030
+    second: INDEX3_R
+  - first:
+      1: 100032
+    second: JUG_L_DYNAMIC
+  - first:
+      1: 100034
+    second: JUG_R_DYNAMIC
+  - first:
+      1: 100036
+    second: //RootNode
+  - first:
+      1: 100038
+    second: LITTLE1_L
+  - first:
+      1: 100040
+    second: LITTLE1_R
+  - first:
+      1: 100042
+    second: LITTLE2_L
+  - first:
+      1: 100044
+    second: LITTLE2_R
+  - first:
+      1: 100046
+    second: LITTLE3_L
+  - first:
+      1: 100048
+    second: LITTLE3_R
+  - first:
+      1: 100050
+    second: MIDDLE1_L
+  - first:
+      1: 100052
+    second: MIDDLE1_R
+  - first:
+      1: 100054
+    second: MIDDLE2_L
+  - first:
+      1: 100056
+    second: MIDDLE2_R
+  - first:
+      1: 100058
+    second: MIDDLE3_L
+  - first:
+      1: 100060
+    second: MIDDLE3_R
+  - first:
+      1: 100062
+    second: NECK
+  - first:
+      1: 100064
+    second: PALM_L
+  - first:
+      1: 100066
+    second: PALM_R
+  - first:
+      1: 100068
+    second: PONY10_DYNAMIC
+  - first:
+      1: 100070
+    second: PONY1_DYNAMIC
+  - first:
+      1: 100072
+    second: PONY2_DYNAMIC
+  - first:
+      1: 100074
+    second: PONY3_DYNAMIC
+  - first:
+      1: 100076
+    second: PONY4_DYNAMIC
+  - first:
+      1: 100078
+    second: PONY5_DYNAMIC
+  - first:
+      1: 100080
+    second: PONY6_DYNAMIC
+  - first:
+      1: 100082
+    second: PONY7_DYNAMIC
+  - first:
+      1: 100084
+    second: PONY8_DYNAMIC
+  - first:
+      1: 100086
+    second: PONY9_DYNAMIC
+  - first:
+      1: 100088
+    second: RING1_L
+  - first:
+      1: 100090
+    second: RING1_R
+  - first:
+      1: 100092
+    second: RING2_L
+  - first:
+      1: 100094
+    second: RING2_R
+  - first:
+      1: 100096
+    second: RING3_L
+  - first:
+      1: 100098
+    second: RING3_R
+  - first:
+      1: 100100
+    second: SHLDER_L
+  - first:
+      1: 100102
+    second: SHLDER_R
+  - first:
+      1: 100104
+    second: SPINE_1
+  - first:
+      1: 100106
+    second: SPINE_2
+  - first:
+      1: 100108
+    second: THIGH_L
+  - first:
+      1: 100110
+    second: THIGH_R
+  - first:
+      1: 100112
+    second: THORAX
+  - first:
+      1: 100114
+    second: THUMB1_L
+  - first:
+      1: 100116
+    second: THUMB1_R
+  - first:
+      1: 100118
+    second: THUMB2_L
+  - first:
+      1: 100120
+    second: THUMB2_R
+  - first:
+      1: 100122
+    second: TOE_L
+  - first:
+      1: 100124
+    second: TOE_R
+  - first:
+      4: 400000
+    second: ANKLE_L
+  - first:
+      4: 400002
+    second: ANKLE_R
+  - first:
+      4: 400004
+    second: BICEP_L
+  - first:
+      4: 400006
+    second: BICEP_R
+  - first:
+      4: 400008
+    second: CALF_L
+  - first:
+      4: 400010
+    second: CALF_R
+  - first:
+      4: 400012
+    second: FORARM_L
+  - first:
+      4: 400014
+    second: FORARM_R
+  - first:
+      4: 400016
+    second: HEAD
+  - first:
+      4: 400018
+    second: HIP
+  - first:
+      4: 400020
+    second: INDEX1_L
+  - first:
+      4: 400022
+    second: INDEX1_R
+  - first:
+      4: 400024
+    second: INDEX2_L
+  - first:
+      4: 400026
+    second: INDEX2_R
+  - first:
+      4: 400028
+    second: INDEX3_L
+  - first:
+      4: 400030
+    second: INDEX3_R
+  - first:
+      4: 400032
+    second: JUG_L_DYNAMIC
+  - first:
+      4: 400034
+    second: JUG_R_DYNAMIC
+  - first:
+      4: 400036
+    second: //RootNode
+  - first:
+      4: 400038
+    second: LITTLE1_L
+  - first:
+      4: 400040
+    second: LITTLE1_R
+  - first:
+      4: 400042
+    second: LITTLE2_L
+  - first:
+      4: 400044
+    second: LITTLE2_R
+  - first:
+      4: 400046
+    second: LITTLE3_L
+  - first:
+      4: 400048
+    second: LITTLE3_R
+  - first:
+      4: 400050
+    second: MIDDLE1_L
+  - first:
+      4: 400052
+    second: MIDDLE1_R
+  - first:
+      4: 400054
+    second: MIDDLE2_L
+  - first:
+      4: 400056
+    second: MIDDLE2_R
+  - first:
+      4: 400058
+    second: MIDDLE3_L
+  - first:
+      4: 400060
+    second: MIDDLE3_R
+  - first:
+      4: 400062
+    second: NECK
+  - first:
+      4: 400064
+    second: PALM_L
+  - first:
+      4: 400066
+    second: PALM_R
+  - first:
+      4: 400068
+    second: PONY10_DYNAMIC
+  - first:
+      4: 400070
+    second: PONY1_DYNAMIC
+  - first:
+      4: 400072
+    second: PONY2_DYNAMIC
+  - first:
+      4: 400074
+    second: PONY3_DYNAMIC
+  - first:
+      4: 400076
+    second: PONY4_DYNAMIC
+  - first:
+      4: 400078
+    second: PONY5_DYNAMIC
+  - first:
+      4: 400080
+    second: PONY6_DYNAMIC
+  - first:
+      4: 400082
+    second: PONY7_DYNAMIC
+  - first:
+      4: 400084
+    second: PONY8_DYNAMIC
+  - first:
+      4: 400086
+    second: PONY9_DYNAMIC
+  - first:
+      4: 400088
+    second: RING1_L
+  - first:
+      4: 400090
+    second: RING1_R
+  - first:
+      4: 400092
+    second: RING2_L
+  - first:
+      4: 400094
+    second: RING2_R
+  - first:
+      4: 400096
+    second: RING3_L
+  - first:
+      4: 400098
+    second: RING3_R
+  - first:
+      4: 400100
+    second: SHLDER_L
+  - first:
+      4: 400102
+    second: SHLDER_R
+  - first:
+      4: 400104
+    second: SPINE_1
+  - first:
+      4: 400106
+    second: SPINE_2
+  - first:
+      4: 400108
+    second: THIGH_L
+  - first:
+      4: 400110
+    second: THIGH_R
+  - first:
+      4: 400112
+    second: THORAX
+  - first:
+      4: 400114
+    second: THUMB1_L
+  - first:
+      4: 400116
+    second: THUMB1_R
+  - first:
+      4: 400118
+    second: THUMB2_L
+  - first:
+      4: 400120
+    second: THUMB2_R
+  - first:
+      4: 400122
+    second: TOE_L
+  - first:
+      4: 400124
+    second: TOE_R
+  - first:
+      74: 7400000
+    second: LARA_RUN
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  - first:
+      74: -3708521791931437206
+    second: LARA_RUN (1)
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -150,9 +411,9 @@ ModelImporter:
       : position error = 9.874395 mm\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'LARA_RUN' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'SHLDER_L' has translation animation that will
-      be discarded.\n\t'SHLDER_R' has translation animation that will be discarded.\n\t'BICEP_R'
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'SHLDER_L' has translation animation that
+      will be discarded.\n\t'SHLDER_R' has translation animation that will be discarded.\n\t'BICEP_R'
       has translation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
@@ -169,18 +430,19 @@ ModelImporter:
     - serializedVersion: 16
       name: LARA_RUN
       takeName: LARA_RUN
+      internalID: 0
       firstFrame: 0.1
       lastFrame: 31
       wrapMode: 0
-      orientationOffsetY: 0.075
+      orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
@@ -261,6 +523,8 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -268,27 +532,31 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: HIP
       humanName: Hips
@@ -1658,14 +1926,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 0f3e1e18a1c3e0c45b5529b75fecd39a,
     type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
